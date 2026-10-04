@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#232738</color>
+    <color name="colorAccent">#FF8C9EFF</color>
+    <color name="colorDrawerSelected">#FF424242</color>
+    <color name="greenBackground">#16181f</color>
+    <color name="blueBackground">#16181f</color>
+    <color name="cardBackground">#424242</color>
+    <color name="menuBarBackground">#212121</color>
+    <color name="menuBarIcon">#e0e0e0</color>
+</resources>
