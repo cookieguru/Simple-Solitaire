@@ -196,6 +196,8 @@ public class SharedData {
      * @param option       The option to apply
      */
     public static void moveToStack(ArrayList<Card> cards, ArrayList<Stack> destinations, int option) {
+        //a toast like "No hint available" no longer applies once cards have moved
+        hideToast();
 
         if (!stopUiUpdates) {
             if (option == OPTION_UNDO) {
@@ -341,6 +343,17 @@ public class SharedData {
             toast.setText(text);
 
         toast.show();
+    }
+
+    /**
+     * Hides the currently shown toast, if any. A cancelled toast can't reliably be shown again,
+     * so the next call to showToast() creates a new one.
+     */
+    public static void hideToast() {
+        if (toast != null) {
+            toast.cancel();
+            toast = null;
+        }
     }
 
     /**
