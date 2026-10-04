@@ -19,6 +19,7 @@
 package de.tobiasbielefeld.solitaire.dialogs;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -26,6 +27,7 @@ import android.support.v7.app.AlertDialog;
 import de.tobiasbielefeld.solitaire.R;
 import de.tobiasbielefeld.solitaire.classes.CustomDialogFragment;
 import de.tobiasbielefeld.solitaire.ui.GameManager;
+import de.tobiasbielefeld.solitaire.ui.manual.Manual;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 
@@ -64,6 +66,16 @@ public class DialogInGameMenu extends CustomDialogFragment {
                             }
                             break;
                         case 2:
+                            if (!gameLogic.hasWon()) {
+                                autoMove.start();
+                            }
+                            break;
+                        case 3:
+                            Intent intent = new Intent(gameManager, Manual.class);
+                            intent.putExtra(GAME, lg.getSharedPrefName());
+                            startActivity(intent);
+                            break;
+                        case 4:
                             if (gameManager.hasLoaded) {
                                 timer.save();
                                 gameLogic.setWonAndReloaded();

@@ -151,7 +151,6 @@ public class Preferences {
     public static String PREF_KEY_MAX_NUMBER_UNDOS;
     public static String PREF_KEY_SHOW_DIALOG_NEW_GAME;
     public static String PREF_KEY_SHOW_DIALOG_REDEAL;
-    public static String PREF_KEY_SHOW_DIALOG_MIX_CARDS;
     public static String PREF_KEY_HIDE_MENU_BAR;
     public static String PREF_KEY_IMPROVE_AUTO_MOVE;
     public static String DEFAULT_CANFIELD_DRAW;
@@ -203,7 +202,6 @@ public class Preferences {
     public static boolean DEFAULT_DISABLE_HINT_COSTS;
     public static boolean DEFAULT_SHOW_DIALOG_NEW_GAME;
     public static boolean DEFAULT_SHOW_DIALOG_REDEAL;
-    public static boolean DEFAULT_SHOW_DIALOG_MIX_CARDS;
     public static boolean DEFAULT_SHOW_ADVANCED_SETTINGS;
     public static boolean DEFAULT_GOLF_CYCLIC;
     public static boolean DEFAULT_LEFT_HANDED_MODE;
@@ -364,7 +362,6 @@ public class Preferences {
         PREF_KEY_TOTAL_POINTS_EARNED = res.getString(R.string.pref_key_total_points_earned);
         PREF_KEY_SHOW_DIALOG_NEW_GAME = res.getString(R.string.pref_key_show_dialog_new_game);
         PREF_KEY_SHOW_DIALOG_REDEAL = res.getString(R.string.pref_key_show_dialog_redeal);
-        PREF_KEY_SHOW_DIALOG_MIX_CARDS = res.getString(R.string.pref_key_show_dialog_mix_cards);
         PREF_KEY_DISABLE_UNDO_COSTS = res.getString(R.string.pref_key_disable_undo_costs);
         PREF_KEY_DISABLE_HINT_COSTS = res.getString(R.string.pref_key_disable_hint_costs);
         PREF_KEY_HIDE_AUTOCOMPLETE_BUTTON = res.getString(R.string.pref_key_hide_auto_complete_button);
@@ -436,7 +433,6 @@ public class Preferences {
         DEFAULT_SHOW_ADVANCED_SETTINGS = res.getBoolean(R.bool.default_show_advaced_settings);
         DEFAULT_SHOW_DIALOG_NEW_GAME = res.getBoolean(R.bool.default_show_dialog_new_game);
         DEFAULT_SHOW_DIALOG_REDEAL = res.getBoolean(R.bool.default_show_dialog_redeal);
-        DEFAULT_SHOW_DIALOG_MIX_CARDS = res.getBoolean(R.bool.default_show_dialog_mix_cards);
         DEFAULT_HIDE_MENU_BAR = res.getBoolean(R.bool.default_hide_menu_bar);
         DEFAULT_IMMERSIVE_MODE = res.getBoolean(R.bool.default_immersive_mode);
         DEFAULT_HIDE_MENU_BUTTON = res.getBoolean(R.bool.default_hide_menu_button);
@@ -1333,10 +1329,6 @@ public class Preferences {
         return savedSharedData.getBoolean(PREF_KEY_SHOW_DIALOG_REDEAL, DEFAULT_SHOW_DIALOG_REDEAL);
     }
 
-    public boolean getShowDialogMixCards() {
-        return savedSharedData.getBoolean(PREF_KEY_SHOW_DIALOG_MIX_CARDS, DEFAULT_SHOW_DIALOG_MIX_CARDS);
-    }
-
     public boolean getDisableUndoCosts() {
         return savedSharedData.getBoolean(PREF_KEY_DISABLE_UNDO_COSTS, DEFAULT_DISABLE_UNDO_COSTS);
     }
@@ -1581,10 +1573,6 @@ public class Preferences {
 
     public void putShowDialogRedeal(boolean value) {
         savedSharedData.edit().putBoolean(PREF_KEY_SHOW_DIALOG_REDEAL, value).apply();
-    }
-
-    public void putShowDialogMixCards(boolean value) {
-        savedSharedData.edit().putBoolean(PREF_KEY_SHOW_DIALOG_MIX_CARDS, value).apply();
     }
 
     public void putFourColorMode(boolean value) {

@@ -45,7 +45,6 @@ import de.tobiasbielefeld.solitaire.classes.CustomAppCompatActivity;
 import de.tobiasbielefeld.solitaire.classes.CustomImageView;
 import de.tobiasbielefeld.solitaire.classes.Stack;
 import de.tobiasbielefeld.solitaire.classes.WaitForAnimationHandler;
-import de.tobiasbielefeld.solitaire.dialogs.DialogInGameHelpMenu;
 import de.tobiasbielefeld.solitaire.dialogs.DialogInGameMenu;
 import de.tobiasbielefeld.solitaire.dialogs.DialogWon;
 import de.tobiasbielefeld.solitaire.handler.HandlerLoadGame;
@@ -836,7 +835,9 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
                 }
                 break;
             case R.id.mainButtonHint:           //show a hint
-                showHelpDialog();
+                if (!gameLogic.hasWon()) {
+                    hint.start();
+                }
                 break;
             case R.id.mainButtonRestart:        //show restart dialog
                 showRestartDialog();
@@ -937,15 +938,6 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
             dialogInGameMenu.show(getSupportFragmentManager(), RESTART_DIALOG);
         } catch (Exception e) {
             Log.e("showRestartDialog: ", e.toString());
-        }
-    }
-
-    public void showHelpDialog() {
-        try {
-            DialogInGameHelpMenu dialog = new DialogInGameHelpMenu();
-            dialog.show(getSupportFragmentManager(), "HELP_MENU");
-        } catch (Exception e) {
-            Log.e("showHelpDialog: ", e.toString());
         }
     }
 
