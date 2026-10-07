@@ -121,6 +121,7 @@
             android:background="@android:drawable/btn_default_small"
             android:onClick="menuClick"
             android:text="@string/game_auto_complete_text"
+            android:textColor="@android:color/primary_text_light"
             android:visibility="gone" />
 
     </RelativeLayout>

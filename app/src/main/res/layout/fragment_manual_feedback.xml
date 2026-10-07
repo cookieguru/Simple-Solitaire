@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@android:drawable/btn_default_small"
+            android:textColor="@android:color/primary_text_light"
             android:text="@string/manual_open_github"
             android:textAllCaps="false" />
 
@@ -58,6 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@android:drawable/btn_default_small"
+            android:textColor="@android:color/primary_text_light"
             android:text="@string/manual_open_google_play"
             android:textAllCaps="false" />
 
