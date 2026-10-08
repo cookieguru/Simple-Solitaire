@@ -42,7 +42,7 @@ import static de.tobiasbielefeld.solitaire.SharedData.*;
 
 public class Bitmaps {
 
-    static int NUM_CARD_THEMES = 10;
+    static int NUM_CARD_THEMES = 11;
     static int NUM_CARD_BACKGROUNDS = 10;
 
     int menuWidth, menuHeight, stackBackgroundWidth, stackBackgroundHeight,
@@ -241,6 +241,9 @@ public class Bitmaps {
                     break;
                 case 10:
                     resID = R.drawable.cards_dondorf;
+                    break;
+                case 11:
+                    resID = R.drawable.cards_basic_dark;
                     break;
             }
 

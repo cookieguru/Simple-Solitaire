@@ -39,7 +39,7 @@ import static de.tobiasbielefeld.solitaire.SharedData.prefs;
 
 public class DialogPreferenceCards extends CustomDialogPreference implements View.OnClickListener {
 
-    private static int NUMBER_OF_CARD_THEMES = 10;
+    private static int NUMBER_OF_CARD_THEMES = 11;
 
     private LinearLayout[] linearLayouts = new LinearLayout[NUMBER_OF_CARD_THEMES];
     private Context context;
@@ -66,6 +66,7 @@ public class DialogPreferenceCards extends CustomDialogPreference implements Vie
         linearLayouts[7] = view.findViewById(R.id.settingsLinearLayoutCardsPoker);
         linearLayouts[8] = view.findViewById(R.id.settingsLinearLayoutCardsParis);
         linearLayouts[9] = view.findViewById(R.id.settingsLinearLayoutCardsDondorf);
+        linearLayouts[10] = view.findViewById(R.id.settingsLinearLayoutCardsBasicDark);
 
         for (int i = 0; i < NUMBER_OF_CARD_THEMES; i++) {
             linearLayouts[i].setOnClickListener(this);
@@ -110,6 +111,9 @@ public class DialogPreferenceCards extends CustomDialogPreference implements Vie
                 break;
             case R.id.settingsLinearLayoutCardsDondorf:
                 choice = 10;
+                break;
+            case R.id.settingsLinearLayoutCardsBasicDark:
+                choice = 11;
                 break;
         }
 
@@ -171,6 +175,9 @@ public class DialogPreferenceCards extends CustomDialogPreference implements Vie
                 break;
             case 10:
                 text = context.getString(R.string.settings_cards_dondorf);
+                break;
+            case 11:
+                text = context.getString(R.string.settings_basic_dark);
                 break;
         }
 
