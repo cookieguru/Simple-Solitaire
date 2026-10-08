@@ -415,6 +415,7 @@ On the tableau, only top cards can be moved and they can only be moved to the fo
 <string name="settings_modern">"Modern"</string>
 <string name="settings_abstract">"Abstract"</string>
 <string name="settings_basic">"Basic"</string>
+<string name="settings_basic_dark">"Basic Dark"</string>
 <string name="settings_oxygen_dark">"Oxygen Dark"</string>
 <string name="settings_oxygen_light">"Oxygen Light"</string>
 <string name="settings_poker">"Poker"</string>

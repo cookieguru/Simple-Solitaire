@@ -48,6 +48,11 @@ Cards Basic:
     Created by me from the Ornate theme using Gimp. (Vector version coming soon). Also 
     useable under the CC0 license.
 
+Cards Basic Dark:
+    A modified version of Cards Basic recolored for dark mode: black card faces, white
+    outlines, light gray spades and clubs, and dimmed colors for the other suits. Same
+    license as Cards Basic.
+
 Cards Paris:
     SVG-cards 2.1 - https://sourceforge.net/projects/svg-cards/
     Copyright 2005 - David Berkeley
