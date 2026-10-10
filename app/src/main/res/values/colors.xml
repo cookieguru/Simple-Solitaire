@@ -11,4 +11,5 @@
     <color name="cardBackground">#ffffff</color>
     <color name="menuBarBackground">#e7e7e7</color>
     <color name="menuBarIcon">#000000</color>
+    <color name="settingsHighlight">#55000000</color>
 </resources>
